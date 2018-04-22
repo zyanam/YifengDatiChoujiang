@@ -45,8 +45,8 @@ getSession(1);
 
         $(function () {
             $('a#btntest').click(function () {
-                $('div#q1').fadeOut(function () {
-                    $('div#q2').fadeIn();
+                $('div#q1').slidedown(function () {
+                    $('div#q2').slideUp();
                 });
             });
 
@@ -172,9 +172,9 @@ getSession(1);
                 });
             }
             else {
-                $('#q' + no).fadeOut(function () {
+                $('#q' + no).slideUp(function () {
                     $q = $('#q' + (parseInt(no) + 1));
-                    $q.fadeIn(function () {
+                    $q.slideDown(function () {
                         //     console.log($q.find('.spanbtn').height());
                         //     $q.find('.spanbtn').parents('.btnanswer').css('height', '100px');
                     });
@@ -186,20 +186,51 @@ getSession(1);
 
         var timer;
 
+
         function countDown() {
             clearInterval(timer);
+            var audio = document.getElementById("di");
 
-            var now = 0;
+            var now = 100, now2 = 0;
             timer = setInterval(function () {
+                now2 = parseInt(now);
+                if (now2 >= 60) {
+                    if ((now2 % 10) == 0) {
+                        audio.play();
+                    }
+                } else if (now2 > 30) {
+                    if ((now2 % 5) == 0) {
+                        audio.play();
+                    }
+                } else {
+                    if ((now2 % 1) == 0) {
+                        audio.play();
+                    }
+                }
 
-                if (now == 100) {
+                if (now2 == 0) {
                     clearInterval(timer);
                     nextQuestion(currentNo);
                 } else {
-                    now += 1;
+                    now -= 0.1;
                     progressfn(now);
                 }
-            }, 100);
+            }, 10);
+
+
+            //
+            // var half = 0;
+            // audiotimer1 = setInterval(function () {
+            //     if (half == 5) {
+            //         clearInterval(audiotimer1);
+            //         audiotimer2 = setInterval(function () {
+            //
+            //         }, 500)
+            //     } else {
+            //         half += 1;
+            //         audio.play();
+            //     }
+            // }, 1000);
         }
 
         function progressfn(cent) {
@@ -209,6 +240,8 @@ getSession(1);
             var progress = document.getElementById("progress");
             progress.style.width = cent + "%";
         }
+
+
     </script>
     <style type="text/css">
         body {
@@ -296,12 +329,17 @@ getSession(1);
             text-align: center;
             line-height: 10px;
             font-size: 0.8em;
-            background-color: #ffda43;
+            background-color: #fe6a60;
             z-index: -2;
 
             left: 0px;
             right: 0px;
             margin: auto;
+
+            -moz-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            transform: scaleX(-1);
         }
 
         #progress {
@@ -309,7 +347,7 @@ getSession(1);
             /*  border:1px solid;*/
             height: 100%;
             width: 0;
-            background: #fe6a60;
+            background: #ffda43;
             border-radius: 5px;
             z-index: -1;
         }
@@ -320,6 +358,7 @@ getSession(1);
     </style>
 </head>
 <body>
+<audio src="../wav/di2.wav" autoplay preload="auto" id="di">wav</audio>
 <div class="" id="mainbody">
     <div class="questiongroup" id="template" style="display: none;">
         <div class="divsubject">
