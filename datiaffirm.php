@@ -50,6 +50,7 @@ getSession(1);
 
 </head>
 <body style="margin: 0;">
+<audio src="wav/di2.wav" preload="auto" id="di">wav</audio>
 <div id="mainbg">
     <a href="datinew.php" id="btnstart"></a>
 </div>

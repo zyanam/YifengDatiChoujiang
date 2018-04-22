@@ -67,13 +67,13 @@ function getUserBaseInfo($openId)
 {
     $mysqli = createConn();
 
-    $stmt = $mysqli->prepare("SELECT id,wx_openId,email,employeeno,realname,dati,choujiang,jiangpin,lingjiang,tright FROM wx_user WHERE wx_openId = ?");
+    $stmt = $mysqli->prepare("SELECT id,wx_openId,email,employeeno,realname,wx_nickname,wx_headimgurl,dati,choujiang,jiangpin,lingjiang,tright FROM wx_user WHERE wx_openId = ?");
     $stmt->bind_param("s", $openId);
     $stmt->execute();
     $stmt->store_result();
 
     $data = array();
-    $stmt->bind_result($id, $wx_openId, $email, $employeeno, $realname, $dati, $choujiang, $jiangpin, $lingjiang, $tright);
+    $stmt->bind_result($id, $wx_openId, $email, $employeeno, $realname, $wx_nickname, $wx_headingurl, $dati, $choujiang, $jiangpin, $lingjiang, $tright);
 
     while ($stmt->fetch()) {
         $data = array(
@@ -81,7 +81,9 @@ function getUserBaseInfo($openId)
             'wx_openid' => $wx_openId,
             'email' => $email,
             'employeeno' => $employeeno,
-            'realname' => $realname,
+            'realname' => empty($realname) || is_null($realname) ? $wx_nickname : $realname,
+            'nickname' => $wx_nickname,
+            'headimgurl' => $wx_headingurl,
             'dati' => $dati,
             'choujiang' => $choujiang,
             'jiangpin' => $jiangpin,
@@ -98,16 +100,16 @@ function getUserBaseInfo($openId)
 
 
 //把从微信接口获取的userid存入数据库
-function saveUserIdToDb($openId = 0, $email, $employeeNo, $realname = "")
+function saveUserIdToDb($openId = 0, $email = "", $employeeNo = "", $realname = "", $wx_UserInfo)
 {
-    if (empty($realname)) {
-        $realname = $employeeNo;
-    }
 
     $mysqli = createConn();
 
-    $stmt = $mysqli->prepare("INSERT INTO wx_user(wx_openId,email,employeeno,realname) VALUES (?,?,?,?)");
-    $stmt->bind_param("ssss", $openId, $email, $employeeNo, $realname);
+    $stmt = $mysqli->prepare("INSERT INTO wx_user" .
+        "(wx_openId,email,employeeno,realname,wx_nickname,wx_sex,wx_language,wx_city,wx_province,wx_country,wx_headimgurl,wx_privilege) " .
+        "VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
+    $stmt->bind_param("ssssssssssss", $openId, $email, $employeeNo, $realname, $wx_UserInfo["nickname"]
+        , $wx_UserInfo["sex"], $wx_UserInfo["language"], $wx_UserInfo["city"], $wx_UserInfo["province"], $wx_UserInfo["country"], $wx_UserInfo["headimgurl"], $wx_UserInfo["privilege"]);
     $result = $stmt->execute();
 
     $stmt->close();
@@ -153,18 +155,19 @@ function getTopUserList($num = 20)
 function getTopUserListByCj($num = 5)
 {
     $conn = createConn();
-    $sql = " SELECT wx_openid,realname,dati,tright,choujiang,jiangpin,cjtime FROM wx_user WHERE choujiang='1' ORDER BY tright DESC  LIMIT " . $num;
+    $sql = " SELECT wx_openid,realname,wx_nickname,dati,tright,choujiang,jiangpin,cjtime FROM wx_user WHERE choujiang='1' ORDER BY tright DESC  LIMIT " . $num;
 
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $stmt->store_result();
 
     $data = array();
-    $stmt->bind_result($wx_openid, $realname, $dati, $tright, $choujiang, $jiangpin, $cttime);
+    $stmt->bind_result($wx_openid, $realname, $wx_nickname, $dati, $tright, $choujiang, $jiangpin, $cttime);
     while ($stmt->fetch()) {
         $data[] = array(
             'openid' => $wx_openid,
-            'realname' => $realname,
+            'realname' => empty($realname) ? $wx_nickname : $realname,
+            'nickname' => $wx_nickname,
             'dati' => $dati,
             'tright' => $tright,
             'choujiang' => $choujiang,

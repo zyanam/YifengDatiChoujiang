@@ -56,11 +56,7 @@ function getAccessToken()
 
 function getUserId($code)
 {
-    $token = getAccessToken();
-
-//    $useridurl = "https://qyapi.weixin.qq.com/cgi-bin/user/getuserinfo" .
-//        "?access_token=" . $token .
-//        "&code=" . $code;
+    //$token = getAccessToken();
 
     $useridurl = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=" . WX_APPID .
         "&secret=" . WX_APPSECRET .
@@ -74,21 +70,15 @@ function getUserId($code)
     return $result;
 }
 
-function getUserInfo($user_ticket)
+function getUserInfoFromWx($userAccesstoken, $openId)
 {
-    $token = getAccessToken();
+    $userInfoUrl = "https://api.weixin.qq.com/sns/userinfo" .
+        "?access_token=" . $userAccesstoken .
+        "&openid=" . $openId .
+        "&lang=zh_CN";
 
-    $userInfoUrl = "https://qyapi.weixin.qq.com/cgi-bin/user/getuserdetail?access_token=" + $token;
-
-    $postData = array(
-        "user_ticket" => $user_ticket
-    );
-
-    $result = postUrl($userInfoUrl, $postData);
-
-    echo "<br />";
-
-    var_dump($result);
+    $result = getUrl($userInfoUrl);
+    return json_decode($result, true);
 }
 
 function sendMsg($userid, $msg)

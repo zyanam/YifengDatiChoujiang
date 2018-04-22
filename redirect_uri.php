@@ -34,24 +34,27 @@ if ($state != $_SESSION['state']) {
 //unset($_SESSION["state"]);
 
 $result = getUserId($code);
-
 $openId = $result["openid"];
+$userAccessToken = $result["access_token"];
 
+//从数据库里查询openid
 $data = getUserBaseInfo($openId);
 
 //$data==0表示第一次登录
 if (count($data) <= 0) {
-    Header("Location:saveRealName.php?isf=1&openId=" . $openId);
-    exit;
+    //Header("Location:saveRealName.php?isf=1&openId=" . $openId);
+    //exit;
+    $wx_UserInfo = getUserInfoFromWx($userAccessToken, $openId);
 
+    saveUserIdToDb($openId, $email, $employeeNo, $realname, $wx_UserInfo);
 }
 
-$email = $data["email"];
-//不是第一次登录，判断是否已填写邮箱
-if (empty($email) || is_null($email)) {
-    Header("Location: " . "saveRealName.php?isf=0&openId=" . $openId);
-    exit;
-}
+//$email = $data["email"];
+////不是第一次登录，判断是否已填写邮箱
+//if (empty($email) || is_null($email)) {
+//    Header("Location: " . "saveRealName.php?isf=0&openId=" . $openId);
+//    exit;
+//}
 
 setSession($openId);
 

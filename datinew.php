@@ -358,7 +358,7 @@ getSession(1);
     </style>
 </head>
 <body>
-<audio src="../wav/di2.wav" autoplay preload="auto" id="di">wav</audio>
+<audio src="wav/di2.wav" preload="auto" id="di">wav</audio>
 <div class="" id="mainbody">
     <div class="questiongroup" id="template" style="display: none;">
         <div class="divsubject">

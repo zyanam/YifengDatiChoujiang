@@ -19,7 +19,7 @@ $authourl = "https://open.weixin.qq.com/connect/oauth2/authorize" .
     "?appid=" . WX_APPID .
     "&redirect_uri=" . urlencode($redirect_uri) .
     "&response_type=code" .
-    "&scope=snsapi_base" .
+    "&scope=snsapi_userinfo" .
     "&state=" . $state . "#wechat_redirect";
 
 Header("Location: " . $authourl);

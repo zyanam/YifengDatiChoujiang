@@ -33,7 +33,7 @@
         //四种奖品的数量
         var j1, j2, j3, j4;
         var jpnum = []; //控制出哪个奖品的数组，从里面随机抽取；
-        var employeeNo;
+        var realname;
 
         {
             //同步查询登录状态和抽奖状态
@@ -61,7 +61,8 @@
                         return;
                     }
 
-                    employeeNo = $res["employeeno"];
+                    realname = $res["realname"];
+
 
                     var jptotal = $res["jl"];
                     $.each(jptotal, function (i, $e) {
@@ -199,7 +200,7 @@
             <div class="btnanswer"><span class="spanbtn">中&nbsp;奖&nbsp;榜&nbsp;单</span></div>
             <div class="zjmd_list">
                 <ul class="zjmd_list_ul clearfloat" id="grouplist">
-                    <li class="clearfloat" id="template" style="display:;">
+                    <li class="clearfloat" id="template" style="display:none;">
                         <div class="zjmd_list_li_l">135****533sssssss9</div>
                         <div class="zjmd_list_li_c">中了8GUasasdfasdf盘</div>
                         <div class="zjmd_list_li_r">2017-9-5</div>
@@ -294,7 +295,7 @@
                                 document.location.href = "../datiaffirm.php";
                                 return;
                             }
-                            alert("恭喜中" + jlName + "! 奖品是" + txt + "\n" + "活动结束后联系售后服务部企划室孙菲领奖\n请截屏保留作为领奖凭证\n工号:" + employeeNo);
+                            alert("恭喜您" + realname + ",抽中" + jlName + "! 奖品是" + txt + "\n请联系售后服务部企划室孙菲领奖\n请截屏保留作为领奖凭证");
                             document.location.href = "../datiaffirm.php";
                             return;
                         });
