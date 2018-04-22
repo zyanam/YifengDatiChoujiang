@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>bootstrap</title>
+
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        body {
+            padding-top: 40px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+
+            var $left = $("div#leftprogress");
+            var $right = $("div#rightprogress");
+
+            var i = 100;
+
+            // inter1 = setInterval(function(){
+            //     i--;
+            //     $left.css('width',100 - i + '%').attr('aria-valuenow',100 - i);
+            //     $right.css('width',i + '%');
+            //
+            //     if(i <= 0)
+            //     {
+            //         clearInterval(inter1);
+            //     }
+            //     console.log(i);
+            // },200);
+
+            var s = 20;
+            inter2 = setInterval(function () {
+                i -= 5;
+                s--;
+                $right.text(s  + ' 秒');
+
+                $left.css('width', 100 - i + '%').attr('aria-valuenow', 100 - i);
+                $right.css('width', i + '%');
+
+                if (s <= 0) {
+                    clearInterval(inter2);
+                    alert("提交");
+                }
+            }, 1000);
+
+        });
+    </script>
+</head>
+<body>
+<div class="progress navbar-fixed-top" style="margin:10px;">
+    <div id="leftprogress" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="0"
+         aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+    </div>
+    <div id="rightprogress" class="progress-bar progress-bar-success"
+         style="width: 100%;padding-left: 5px;">
+        20秒
+    </div>
+</div>
+<div class="list-group">
+    <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading lead">1.这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是</h4>
+        <div class="list-group-item-text text-right">
+            <div class="btn-group btn-group-justified" data-toggle="buttons">
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> 山西
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> 广州
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> 新疆
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> 北京
+                </label>
+            </div>
+        </div>
+    </a>
+    <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading lead">2.这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是</h4>
+        <div class="list-group-item-text text-right">
+            <div class="btn-group " data-toggle="buttons">
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> A
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> B
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> C
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> D
+                </label>
+            </div>
+        </div>
+    </a>
+    <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading lead">3.这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是</h4>
+        <div class="list-group-item-text text-right">
+            <div class="btn-group btn-group-justified" data-toggle="buttons">
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> 对
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> 错
+                </label>
+            </div>
+        </div>
+    </a>
+    <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading lead">4.这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是</h4>
+        <div class="list-group-item-text text-right">
+            <div class="btn-group " data-toggle="buttons">
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> A
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> B
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> C
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> D
+                </label>
+            </div>
+        </div>
+    </a>
+    <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading lead">5.这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是</h4>
+        <div class="list-group-item-text text-right">
+            <div class="btn-group " data-toggle="buttons">
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> 对
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> 错
+                </label>
+            </div>
+        </div>
+    </a>
+    <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading lead">6.这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是题目这是</h4>
+        <div class="list-group-item-text text-right">
+            <div class="btn-group " data-toggle="buttons">
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> A
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> B
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> C
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio" name="options"> D
+                </label>
+            </div>
+        </div>
+    </a>
+    <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading lead"></h4>
+        <div class="list-group-item-text text-right">
+            <button type="button" class="btn btn-primary btn-group-justified">答完了</button>
+        </div>
+    </a>
+</div>
+</body>
+</html>

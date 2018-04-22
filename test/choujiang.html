@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RunJS</title>
+
+
+    <script id="jquery_182" type="text/javascript" class="library" src="../js/jquery-1.8.2.min.js"></script>
+    <script id="jqueryplugins9_jquery_rotate_22" type="text/javascript" class="library" src="../js/jQueryRotate.2.2.js"></script>
+
+    <style type="text/css">
+        *{margin: 0; padding: 0;}
+
+
+        h3{
+            text-align: center;
+            font-family: "微软雅黑", "microsoft yahei";
+            line-height: 60px;
+        }
+        h3 span{
+            font-size: 40px;
+            line-height: 60px;
+            font-family: elephant;
+            display: inline-block;
+            padding: 5px 20px;
+            border: 2px solid red;
+            border-radius: 10px;
+            color: #f00;
+            background-color: yellow;
+        }
+
+        .box{
+            width: 600px;
+            height: 620px;
+            background-color: rgba(255,0,0,.5);
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .g-lottery-box {
+            width: 400px;
+            height: 400px;
+            margin-left: 30px;
+            position: relative;
+            background: url(http://sandbox.runjs.cn/uploads/rs/94/oedovyl6/0.gif) no-repeat;
+            margin: 0 auto;
+            z-index:1;
+        }
+
+        .g-lottery-box .g-lottery-img {
+            width: 340px;
+            height: 340px;
+            position: relative;
+            background: url(http://sandbox.runjs.cn/uploads/rs/94/oedovyl6/1.png) no-repeat;
+            left: 30px;
+            top: 30px;
+            z-index:10;
+        }
+
+        .g-lottery-box #clik {
+            width: 186px;
+            height: 186px;
+            position: absolute;
+            top: 77px;
+            left: 77px;
+            background: url(http://sandbox.runjs.cn/uploads/rs/94/oedovyl6/2.png) no-repeat;
+            z-index:20;
+        }
+        .mar{
+            height: 60px;
+            line-height: 60px;
+            font-weight: bold;
+            font-size: 40px;
+            margin-top: 20px;
+            background-color: rgba(255,255,255,.7);
+            color: red;
+        }
+        .footer{
+            text-align: center;
+            line-height: 40px;
+
+        }
+    </style>
+
+    <script type="text/javascript">
+
+
+        var raNum;
+        //注意：要将raNum设置为全局变量，容易出错
+
+        $(function() {
+            var i =0;
+            $('#clik').click(function() {
+
+                i++;
+                if(i>3){
+                    alert("您的抽奖机会已经用完！");
+                    return;
+                }
+                var ii = 3-i;
+                if(ii>=0){
+                    $('#ii').html(ii);
+                }
+
+
+                raNum = Math.random()*360;
+                if(150 < raNum && raNum <= 210){
+                    raNum = 234;
+                }
+                console.log(raNum);
+                $(this).rotate({
+                    duration:3000,	//旋转时间
+                    angle:0,		//开始旋转的角度
+                    animateTo:raNum+360*3,	//最终结束时的角度
+                    callback:function(){	//返回一个A方法
+                        A();
+                    }
+                });
+            });
+        });
+
+        function A(){
+
+            if(0 < raNum && raNum <= 30){
+                alert("恭喜您抽到理财金2000元！");
+                return;
+            }else if(30 < raNum && raNum <= 90){
+                alert("谢谢参与~再来一次吧~");
+                return;
+            }else if(90 < raNum && raNum <= 150){
+                alert("恭喜您抽到理财金5200元！");
+                return;
+            }else if(150 < raNum && raNum <= 210){
+                //再将概率减小到1%
+                var n = Math.random()*100;
+                if(n<1){
+                    alert("恭喜您获得100元京东E卡，将在次日以短信形式下发到您的手机上，请注意查收!");
+                }else{
+                    raNum += 60;
+                }
+                return;
+            }else if(210 < raNum && raNum <= 270){
+                alert("谢谢参与~再来一次吧~");
+                return;
+            }else if(270 < raNum && raNum <= 330){
+                alert("恭喜您抽到理财金1000元！");
+                return;
+            }else if(330 < raNum && raNum <= 360){
+                alert("恭喜您抽到理财金2000元！");
+                return;
+            }
+        }
+
+        var now =new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        var t = hours+":"+minutes+":"+seconds;
+        console.log(t);
+
+        $('#time').html(t);
+
+    </script>
+
+</head>
+<body>
+<div class="box">
+    <h3>欢迎来到赵子越抽奖小程序，您还有<span id="ii">3</span>次抽奖机会</h3>
+    <div class="g-lottery-box">
+        <div class="g-lottery-img">
+            <div id="clik" title="开始抽奖"></div>
+        </div>
+    </div>
+    <div class="mar">
+        <marquee><span id="time"></span>恭喜foodoir抽到京东e卡！！！！</marquee>
+    </div>
+    <div class="footer">
+        版权所有 ©foodoir 2016-10-11
+    </div>
+</div>
+
+</body>
+</html>

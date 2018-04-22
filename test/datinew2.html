@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>答题</title>
+    <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+
+    <script type="text/javascript">
+
+
+        $(function () {
+            $('a#btntest').click(function () {
+                $('div#q1').fadeOut(function () {
+                    $('div#q2').fadeIn();
+                });
+            });
+
+            return;
+
+            //获取数据
+            $.get("../getSubject.php", function ($res) {
+
+                var $mainbody = $('div#mainbody');
+                var $template = $('div#template');
+
+                $.each($res, function (i, $item) {
+                    var qid = 'q' + i;
+
+                    var $templateclone = $template.clone();
+
+                    $templateclone.find('p').text((i + 1) + "、" + $item['subject']);
+                    $templateclone.attr('id', qid);
+
+                    var $btnanswergroup = $templateclone.find(".btnanswergroup");
+                    var $btnanswer = $("<div class=\"btnanswer\">滚雪球理论</div>");
+                    $btnanswer.attr('qid', qid)
+                        .attr('no', i);
+
+                    var options = $item["options"].split(',');
+                    var j;
+                    for (j in options) {
+                        var $btnanswerclone = $btnanswer.clone();
+                        $btnanswerclone.text(options[j]);
+                        $btnanswergroup.append($btnanswerclone);
+                    }
+
+                    if (i == 0) {
+                        $templateclone.fadeIn();
+                    }
+                    $mainbody.append($templateclone);
+                });
+            });
+
+
+            //绑定答题按钮事件
+            $('.btnanswer').live("touchstart", function () {
+                var $this = $(this);
+
+                var qid = $this.attr('qid');
+                var no = $this.attr('no');
+
+                if (no == 5) {
+                    //提交
+                    alert('aaa');
+                }
+                else {
+                    $('#' + qid).fadeOut(function () {
+                        $('#q' + (parseInt(no) + 1)).fadeIn();
+                    });
+                }
+            });
+        });
+
+        window.onload = function () {
+            var now = 0;
+            var timer = setInterval(function () {
+
+                if (now == 100) {
+                    clearInterval(timer);
+
+                } else {
+                    now += 1;
+                    progressfn(now);
+                }
+            }, 100);
+        }
+
+        function progressfn(cent) {
+            //var progressbar = document.getElementById("progressbar");
+            //progressbar = progressbar.getElementsByTagName("p");
+            //progressbar[0].innerHTML = cent + "%";
+            var progress = document.getElementById("progress");
+            progress.style.width = cent + "%";
+        }
+    </script>
+    <style type="text/css">
+        body {
+            background-image: url(../img/bg.jpg);
+        }
+
+        #mainbody {
+            display: block;
+            padding: 20px;
+        }
+
+        .questiongroup {
+            display: block;
+            padding-bottom: 15px;
+        }
+
+        .divsubject {
+            display: block;
+            height: 200px;
+            padding: 10px;
+            font-size: 1.2em;
+            font-weight: bolder;
+            line-height: 1.5em;
+            /*-webkit-border-radius: 15px;*/
+            /*-moz-border-radius: 15px;*/
+            /*border-radius: 15px;*/
+            /*border: 2px solid #000000;*/
+            /*background-color: #fe6a60;*/
+        }
+
+        .btnanswergroup {
+            display: block;
+            margin-top: 40px;
+        }
+
+        .btnanswer {
+            width: 80%;
+            border: 2px solid #ff695f;
+            background-color: #FFF;
+            text-align: center;
+            border-radius: 20px;
+            padding-top: 10px;
+            height: 40px;
+            margin: 0 auto;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            background-image: url(../img/btnbottom.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: bottom center;
+            background-origin: border-box;
+        }
+
+        #divfooter {
+            height: 25px;
+        }
+
+        #progressbar {
+            position: fixed;
+            height: 10px;
+            width: 60%;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 10px;
+            font-size: 0.8em;
+            background-color: #ffda43;
+            z-index: -2;
+
+            left: 0px;
+            right: 0px;
+            margin: auto;
+        }
+
+        #progress {
+            position: absolute;
+            /*  border:1px solid;*/
+            height: 100%;
+            width: 0;
+            background: #fe6a60;
+            border-radius: 5px;
+            z-index: -1;
+        }
+
+        #progress {
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="" id="mainbody">
+    <div class="questiongroup" id="template">
+        <div class="divsubject">
+            <p>
+                1、 在投诉对应-顾客对应体制中经销店的职责： 除了建立顾客对应体制，还要利用投诉案件，进行经销店内部的改善，其中重要投诉应第一时间与哪一部门取得联系，同时应承担与哪一部门沟通的责任？
+            </p>
+        </div>
+        <div class="btnanswergroup">
+            <div class="btnanswer">滚雪球理论</div>
+        </div>
+    </div>
+</div>
+<div id="divfooter">
+    <div id="progressbar">
+        <div id='progress'></div>
+        <p></p>
+    </div>
+</div>
+</body>
+</html>

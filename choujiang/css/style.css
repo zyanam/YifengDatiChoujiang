@@ -1,0 +1,125 @@
+.chj_t {
+    width: 100%;
+    /*height: 7rem;*/
+    padding-top: 3.2rem;
+    background: url(../images/cjbg.png) no-repeat;
+    background-size: 100%;
+}
+
+.chj_t_con {
+    width: 12rem;
+    height: 12rem;
+    /*background: url(../images/zpbg.png);*/
+    margin: 0 auto;
+    background-size: 100%;
+    position: relative;
+}
+
+.cj_b {
+    width: 100%;
+    margin-top: 1.5rem;
+    min-height: 3rem;
+}
+
+.cj_b_con {
+    width: 15rem;
+    height: 9rem;
+    margin: 0 auto;
+    /*background: url(../images/md_list_bg.png) center no-repeat;*/
+    background-size: 100%;
+    position: relative;
+}
+
+.mmjj {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mmjj .turnplate {
+    display: block;
+    width: 100%;
+}
+
+.mmjj .turnplate canvas.item {
+    width: 99%;
+}
+
+.mmjj .turnplate img.pointer {
+    position: absolute;
+    width: 38.5%;
+    height: 43.5%;
+    left: 29.8%;
+    top: 25%;
+}
+
+.cjzjnr {
+    width: 10.3rem;
+    height: 10.3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -5.07rem;
+    margin-top: -5.07rem;
+}
+
+.zhuti {
+    margin: 0 auto;
+    max-width: 640px;
+    overflow: hidden;
+    min-height: 100%;
+    /* padding-bottom:3rem;  */
+    background-color: #f7f7f7;
+    position: relative;
+}
+
+.zjmd_list {
+    width: 90%;
+    height: 5.5rem;
+    position: absolute;
+    top: 2rem;
+    left: 0.5rem;
+    overflow: hidden;
+}
+
+.zjmd_list_ul {
+    width: 100%;
+    padding-left: 0;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.zjmd_list_ul li {
+    width: 100%;
+    margin-bottom: 0.4rem;
+}
+
+.zjmd_list_li_l {
+    float: left;
+    width: 33%;
+}
+
+.zjmd_list_li_c {
+    float: left;
+    width: 34%;
+}
+
+.zjmd_list_li_r {
+    float: left;
+    width: 33%;
+    text-align: right;
+}
+
+.clearfloat:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
+
+.clearfloat {
+    zoom: 1
+}
