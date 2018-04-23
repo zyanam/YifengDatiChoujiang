@@ -19,16 +19,10 @@
     <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript"></script>
     <script src="../js/wxshare.js" type="text/javascript"></script>
 
+    <script src="../mobilealert/layer.js" type="text/javascript"></script>
+
     <script>
         window.history.forward(1);
-        window.alert = function (name) {
-            var iframe = document.createElement("IFRAME");
-            iframe.style.display = "none";
-            iframe.setAttribute("src", 'data:text/plain,');
-            document.documentElement.appendChild(iframe);
-            window.frames[0].window.alert(name);
-            iframe.parentNode.removeChild(iframe);
-        }
 
         //四种奖品的数量
         var j1, j2, j3, j4;
@@ -50,14 +44,28 @@
                     }
 
                     if (parseInt($res["right"]) < 1) {
-                        alert("答题正确才能抽奖！");
-                        document.location.href = "../datiaffirm.php";
+                        //alert("答题正确才能抽奖！");
+                        layer.open({
+                            content: '答题正确才能抽奖！'
+                            , btn: '好的'
+                            , yes: function (index) {
+                                document.location.href = "../datiaffirm.php";
+                                layer.close(index)
+                            }
+                        });
                         return;
                     }
 
                     if ($res["choujiang"] == "1") {
-                        alert("您已经抽过奖了！");
-                        document.location.href = "../datiaffirm.php";
+                        //alert("您已经抽过奖了！");
+                        layer.open({
+                            content: '您已经抽过奖了！'
+                            , btn: '好的'
+                            , yes: function (index) {
+                                document.location.href = "../datiaffirm.php";
+                                layer.close(index)
+                            }
+                        });
                         return;
                     }
 
@@ -291,12 +299,27 @@
 
                         $.get(url, function ($res) {
                             if ($res["choujiang"] == "yes") {
-                                alert("您已经抽过奖了！");
-                                document.location.href = "../datiaffirm.php";
+                                //alert("您已经抽过奖了！");
+                                layer.open({
+                                    content: '恭喜您全部答对<br />可以抽奖啦，祝您好运'
+                                    , btn: '好的'
+                                    , yes: function (index) {
+                                        document.location.href = "../datiaffirm.php";
+                                        layer.close(index)
+                                    }
+                                });
+
                                 return;
                             }
-                            alert("恭喜您" + realname + ",抽中" + jlName + "! 奖品是" + txt + "\n请联系售后服务部企划室孙菲领奖\n请截屏保留作为领奖凭证");
-                            document.location.href = "../datiaffirm.php";
+                            //alert("恭喜您" + realname + ",抽中" + jlName + "! 奖品是" + txt + "\n请联系售后服务部企划室孙菲领奖\n请截屏保留作为领奖凭证");
+                            layer.open({
+                                content: "恭喜中奖! " + txt + "!<br />一周内，奖品由事务局统一发放，请等待。"
+                                , btn: '好的'
+                                , yes: function (index) {
+                                    document.location.href = "../datiaffirm.php";
+                                    layer.close(index)
+                                }
+                            });
                             return;
                         });
                         turnplate.bRotate = !turnplate.bRotate;
@@ -458,7 +481,6 @@
         }
 
     </script>
-
 </div>
 </body>
 

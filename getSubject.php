@@ -14,9 +14,9 @@ require_once "funcs.php";
 //    array_push($data,$obj);
 //}
 
-$idAry = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17");
+//$idAry = Array("3");
 
-$idAry = makeRand(1, 12, 6);
+$idAry = makeRand(1, 17, 6);
 
 $data = getSubjectById($idAry);
 

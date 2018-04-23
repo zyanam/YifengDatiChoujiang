@@ -15,17 +15,20 @@ getSession(1);
     <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript"></script>
     <script src="../js/wxshare.js" type="text/javascript"></script>
 
+    <script src="mobilealert/layer.js" type="text/javascript"></script>
+
+
     <script type="text/javascript">
-
-
-        window.alert = function (name) {
-            var iframe = document.createElement("IFRAME");
-            iframe.style.display = "none";
-            iframe.setAttribute("src", 'data:text/plain,');
-            document.documentElement.appendChild(iframe);
-            window.frames[0].window.alert(name);
-            iframe.parentNode.removeChild(iframe);
+        var audioright, audiowrong;
+        var colorCfg = {
+            'choosed': '#ff695f',    //选上的
+            'right': '#ff695f',      //正确答案
+            'wrong': '#FFA500'       //错误答案
         }
+        window.onload = function () {
+            audioright = document.getElementById("audioright");
+            audiowrong = document.getElementById("audiowrong");
+        };
 
         function stopTouchendPropagationAfterScroll() {
             var locked = false;
@@ -66,7 +69,7 @@ getSession(1);
                     $templateclone.attr('id', qid);
 
                     var $btnanswergroup = $templateclone.find(".btnanswergroup");
-                    var $btnanswer = $("<div class=\"btnanswer\"><span class=\"spanbtn\">滚雪球理论</span></div>");
+                    var $btnanswer = $("<div class=\"btnanswer\"><div class=\"symbol\"></div><span class=\"spanbtn\">滚雪球理论</span></div>");
                     $btnanswer.attr('qid', qid)
                         .attr('no', i);
 
@@ -80,30 +83,18 @@ getSession(1);
                         var $btnspan = $btnanswerclone.find('span');
                         $btnspan.text(option);
 
-                        var len = option.length;
-
-                        if (len > 11) {
-                            $btnanswerclone.css("height", "70px");
-                            $btnspan.css("fontSize", "1em").css("textAlign", "left");
-                        } else if (len > 22) {
-                            $btnanswerclone.css("height", "90px");
-                            $btnspan.css("fontSize", "1em").css("textAlign", "left");
-                        } else if (len > 33) {
-                            $btnanswerclone.css("height", "110px");
-                            $btnspan.css("fontSize", "1em").css("textAlign", "left");
-
-                        }
-
-
                         isAns = option == answer ? 1 : 0;
 
                         if (isAns == 1) {
-                            $btnanswerclone.css('backgroundColor', 'red');
+                            $btnanswerclone.css('backgroundColor', '#f3f3f3');
                         }
 
-                        $btnanswerclone.attr('isans', isAns);
+                        $btnanswerclone
+                            .attr('isans', isAns)
+                            .attr('cs', 0);
                         $btnanswergroup.append($btnanswerclone);
                     }
+                    $templateclone.append("<div></div>");
 
                     if (i == 0) {
                         $templateclone.fadeIn();
@@ -117,22 +108,67 @@ getSession(1);
             $('.btnanswer').live("touchend", function () {
                 var $this = $(this);
                 var isAns = $this.attr('isans');
-
+                var $spanbtn = $this.find(".spanbtn");
                 var no = $this.attr('no');
 
-                if (isAns == 1) {
-                    arrAnswer.push(no);
+                if ($spanbtn.height() > 24) {
+                    $spanbtn.css({
+                        'textIndent': '1.5rem'
+                    });
                 }
-                nextQuestion(no);
+
+                $this.css('backgroundColor', colorCfg.choosed);
+                setTimeout(function () {
+                    $this.css('backgroundColor', '#FFF');
+                }, 500);
+
+
+                if (isAns == 1) {
+                    //答对了
+                    arrAnswer.push(no);
+                    audioright.play();
+                    $this.find('.symbol').css('backgroundImage', 'url("img/right.png")').show();
+                }
+                else {
+                    //答错了
+                    audiowrong.play();
+
+                    $this.find('.symbol').css('backgroundImage', 'url("img/wrong.png")').show();
+
+                    $this.attr('cs', '1');
+                    setTimeout(function () {
+                        //$this.css('backgroundColor', colorCfg.wrong);
+                        $groups = $this.parents('.btnanswergroup').find('.btnanswer');
+                        $.each($groups, function (i, group) {
+                            $group = $(group);
+                            if ($group.attr('isans') == 1) {
+                                //$group.css('backgroundColor', colorCfg.right);
+                                $group.find('.symbol').css('backgroundImage', 'url("img/right.png")').show();
+                            }
+                            else {
+                                if ($group.attr('cs') != 1) {
+                                    $group.animate({
+                                        opacity: 0
+                                    });
+                                }
+                            }
+                        });
+                    }, 500);
+                }
+
+                setTimeout(function () {
+                    nextQuestion(no);
+                }, 1500);
             });
 
             $('.btnanswer').live("touchmove", function () {
                 stopTouchendPropagationAfterScroll();
             });
-        });
+        })
+        ;
 
         function nextQuestion(no) {
-
+            // return;
             currentNo = parseInt(no) + 1;
             if (no == 5) {
                 clearInterval(timer);
@@ -150,34 +186,52 @@ getSession(1);
                     if (ra == 6) {
                         if ($choujiang == '0') {
                             //全部答对可以抽奖
-                            alert("恭喜您全部答对\n可以抽奖啦，祝您好运");
-                            document.location.href = "choujiang/index.html";
+                            //alert("恭喜您全部答对\n可以抽奖啦，祝您好运");
+                            layer.open({
+                                content: '恭喜您全部答对<br />可以抽奖啦，祝您好运'
+                                , btn: '好的'
+                                , yes: function (index) {
+                                    document.location.href = "choujiang/index.html";
+                                    layer.close(index)
+                                }
+                            });
                         } else {
                             //不可以抽奖
-                            alert("恭喜您全部答对\n" + $msg);
-                            document.location.href = "datiaffirm.php";
+                            //alert("恭喜您全部答对\n" + $msg);
+                            layer.open({
+                                content: '恭喜您全部答对<br />' + $msg
+                                , btn: '好的'
+                                , yes: function (index) {
+                                    document.location.href = "datiaffirm.php";
+                                    layer.close(index)
+                                }
+                            });
                         }
                     } else {
-                        $msgnew = "您答对了" + ra + "道题\n";
+                        $msgnew = "您答对了" + ra + "道题<br />";
                         if ($choujiang == "0") {
-                            $msgnew += "不能参加抽奖\n不要放弃,加油";
+                            $msgnew += "不能参加抽奖<br />不要放弃,加油";
                         }
                         else {
                             $msgnew += $msg;
                         }
 
-                        alert($msgnew);
-                        document.location.href = "datiaffirm.php";
+                        //alert($msgnew);
+                        layer.open({
+                            content: $msgnew
+                            , btn: '好的'
+                            , yes: function (index) {
+                                layer.close(index);
+                                document.location.href = "datiaffirm.php";
+                            }
+                        });
                     }
                 });
             }
             else {
-                $('#q' + no).slideUp(function () {
-                    $q = $('#q' + (parseInt(no) + 1));
-                    $q.slideDown(function () {
-                        //     console.log($q.find('.spanbtn').height());
-                        //     $q.find('.spanbtn').parents('.btnanswer').css('height', '100px');
-                    });
+                $('#q' + no).fadeOut(function () {
+                    $q = $('#q' + currentNo);
+                    $q.fadeIn();
                 });
             }
 
@@ -189,48 +243,16 @@ getSession(1);
 
         function countDown() {
             clearInterval(timer);
-            var audio = document.getElementById("di");
-
             var now = 100, now2 = 0;
             timer = setInterval(function () {
-                now2 = parseInt(now);
-                if (now2 >= 60) {
-                    if ((now2 % 10) == 0) {
-                        audio.play();
-                    }
-                } else if (now2 > 30) {
-                    if ((now2 % 5) == 0) {
-                        audio.play();
-                    }
-                } else {
-                    if ((now2 % 1) == 0) {
-                        audio.play();
-                    }
-                }
-
-                if (now2 == 0) {
+                if (now == 0) {
                     clearInterval(timer);
                     nextQuestion(currentNo);
                 } else {
-                    now -= 0.1;
+                    now -= 1;
                     progressfn(now);
                 }
-            }, 10);
-
-
-            //
-            // var half = 0;
-            // audiotimer1 = setInterval(function () {
-            //     if (half == 5) {
-            //         clearInterval(audiotimer1);
-            //         audiotimer2 = setInterval(function () {
-            //
-            //         }, 500)
-            //     } else {
-            //         half += 1;
-            //         audio.play();
-            //     }
-            // }, 1000);
+            }, 100);
         }
 
         function progressfn(cent) {
@@ -273,7 +295,8 @@ getSession(1);
 
         .btnanswergroup {
             display: block;
-            margin-top: 40px;
+            margin-top: 1rem;
+            position: relative;
         }
 
         .btnanswer {
@@ -281,7 +304,6 @@ getSession(1);
             border: 2px solid #ff695f;
             background-color: #FFF;
             border-radius: 20px;
-            height: 40px;
             line-height: 1.5em;
             display: block;
 
@@ -290,6 +312,7 @@ getSession(1);
             background-size: contain;
             background-position: bottom center;
             background-origin: border-box;
+            padding: 0.8rem;
 
             position: relative;
             margin: 0 auto;
@@ -297,21 +320,36 @@ getSession(1);
         }
 
         .btnanswer span {
-            position: absolute;
-            width: 90%;
-            top: 45%;
-            left: 50%;
+            position: relative;
+            /*width: 90%;*/
             text-align: center;
             /*transform: translateY(-50%);*/
-            transform: translate(-50%, -50%);
             line-height: 1.1em;
             font-weight: bold;
             clear: both;
+            line-height: 1.5rem;
 
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
         }
 
         .btnanswer:active {
             background-color: #ff695f;
+        }
+
+        div.symbol {
+            width: 1.2rem;
+            height: 1.2rem;
+            background-image: url("img/right.png");
+            background-repeat: no-repeat;
+            -webkit-background-origin: content-box;
+            background-origin: content-box;
+            -webkit-background-size: contain;
+            background-size: contain;
+            position: absolute;
+            display: none;
         }
 
         #divfooter {
@@ -358,7 +396,8 @@ getSession(1);
     </style>
 </head>
 <body>
-<audio src="wav/di2.wav" preload="auto" id="di">wav</audio>
+<audio src="wav/diright.wav" id="audioright">wav</audio>
+<audio src="wav/diwrong.wav" id="audiowrong">wav</audio>
 <div class="" id="mainbody">
     <div class="questiongroup" id="template" style="display: none;">
         <div class="divsubject">

@@ -9,13 +9,30 @@
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="../mobilealert/layer.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#alerttest").click(function () {
+                layer.open({
+                    content: '移动版和PC版不<br />能同时存在同一页面'
+                    , btn: '好的'
+                    , yes: function (index) {
+                        alert('点击了是')
+                        layer.close(index)
+                    }
+                });
+            });
+        });
+    </script>
 </head>
-<body  style="background-color:#eee;">
+<body style="background-color:#eee;">
 <div class="jumbotron" style="padding-left:5px;padding-right: 5px;">
     <ul class="list-group">
         <li class="list-group-item">从题库中随机抽取六道题目，要求二十秒之内答完。全部答对可以参加一次抽奖，百分百中奖，答错不能抽奖，但可以重复答题。答题次数没有限制，抽奖只能参加一次。</li>
     </ul>
     <a type="button" href="../simlongin.php" class="btn btn-primary btn-lg center-block">准备好了，开始答题</a>
+    <a type="button" href="javascript:void(0)" id="alerttest" class="btn btn-primary btn-lg center-block">弹出框</a>
 </div>
 </body>
 </html>
