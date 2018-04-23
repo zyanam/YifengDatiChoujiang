@@ -15,6 +15,9 @@ getSession(1);
     <title>答题规则</title>
 
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript"></script>
+    <script src="../js/wxshare.js" type="text/javascript"></script>
+
 
     <style type="text/css">
         html {

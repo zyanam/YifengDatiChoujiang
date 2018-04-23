@@ -19,7 +19,7 @@ getSession(1);
 
 
     <script type="text/javascript">
-        var audioright, audiowrong;
+        var audioright, audiowrong, audioke;
         var colorCfg = {
             'choosed': '#ff695f',    //选上的
             'right': '#ff695f',      //正确答案
@@ -28,6 +28,7 @@ getSession(1);
         window.onload = function () {
             audioright = document.getElementById("audioright");
             audiowrong = document.getElementById("audiowrong");
+            audioke = document.getElementById("audioke");
         };
 
         function stopTouchendPropagationAfterScroll() {
@@ -94,14 +95,14 @@ getSession(1);
                             .attr('cs', 0);
                         $btnanswergroup.append($btnanswerclone);
                     }
-                    $templateclone.append("<div></div>");
 
                     if (i == 0) {
-                        $templateclone.fadeIn();
+                        $templateclone.fadeIn(function () {
+                            countDown();
+                        });
                     }
                     $mainbody.append($templateclone);
                 });
-                countDown();
             });
 
             //绑定答题按钮事件
@@ -127,22 +128,33 @@ getSession(1);
                     //答对了
                     arrAnswer.push(no);
                     audioright.play();
-                    $this.find('.symbol').css('backgroundImage', 'url("img/right.png")').show();
+                    setTimeout(function () {
+                        $this.find('.symbol').css('backgroundImage', 'url("img/right.png")').show();
+                    }, 500);
                 }
                 else {
                     //答错了
                     audiowrong.play();
 
-                    $this.find('.symbol').css('backgroundImage', 'url("img/wrong.png")').show();
+                    setTimeout(function(){
+                        $this.find('.symbol').css('backgroundImage', 'url("img/wrong.png")').show();
+                    },500)
+
 
                     $this.attr('cs', '1');
                     setTimeout(function () {
                         //$this.css('backgroundColor', colorCfg.wrong);
-                        $groups = $this.parents('.btnanswergroup').find('.btnanswer');
+                        //$groups = $this.parents('.btnanswergroup').find('.btnanswer');
+                        $groups = $this.siblings();
                         $.each($groups, function (i, group) {
                             $group = $(group);
                             if ($group.attr('isans') == 1) {
-                                //$group.css('backgroundColor', colorCfg.right);
+                                var $spanbtn = $group.find(".spanbtn");
+                                if ($spanbtn.height() > 24) {
+                                    $spanbtn.css({
+                                        'textIndent': '1.5rem'
+                                    });
+                                }
                                 $group.find('.symbol').css('backgroundImage', 'url("img/right.png")').show();
                             }
                             else {
@@ -168,10 +180,13 @@ getSession(1);
         ;
 
         function nextQuestion(no) {
+            clearInterval(timer);
+            iii--
             // return;
             currentNo = parseInt(no) + 1;
             if (no == 5) {
                 clearInterval(timer);
+                iii--;
                 //提交
                 //alert(arrAnswer.join(','));
                 var ra = arrAnswer.length;
@@ -233,20 +248,28 @@ getSession(1);
                     $q = $('#q' + currentNo);
                     $q.fadeIn();
                 });
+                countDown();
             }
-
-            countDown();
         }
 
+        var iii = 0;
         var timer;
 
-
         function countDown() {
-            clearInterval(timer);
-            var now = 100, now2 = 0;
+            iii++;
+            console.log("timercount=" + iii);
+
+            var now = 100;
             timer = setInterval(function () {
+
+                if (now < 40) {
+                    if ((now % 10) == 0) {
+                        audioke.play();
+                    }
+                }
                 if (now == 0) {
                     clearInterval(timer);
+                    iii--;
                     nextQuestion(currentNo);
                 } else {
                     now -= 1;
@@ -398,6 +421,7 @@ getSession(1);
 <body>
 <audio src="wav/diright.wav" id="audioright">wav</audio>
 <audio src="wav/diwrong.wav" id="audiowrong">wav</audio>
+<audio src="wav/ke.wav" id="audioke">wav</audio>
 <div class="" id="mainbody">
     <div class="questiongroup" id="template" style="display: none;">
         <div class="divsubject">

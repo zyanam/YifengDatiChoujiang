@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a679880-9720-4475-af7b-06a624024f2d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/test/duigou.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/choujiang/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/choujiang/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datiaffirm.php" beforeDir="false" afterPath="$PROJECT_DIR$/datiaffirm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datinew.php" beforeDir="false" afterPath="$PROJECT_DIR$/datinew.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getSubject.php" beforeDir="false" afterPath="$PROJECT_DIR$/getSubject.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/datiaffirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/test/datiaffirm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/datinew2.html" beforeDir="false" afterPath="$PROJECT_DIR$/test/datinew2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wav/di.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wav/di2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/getJsTicketPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/getJsTicketPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/wxshare.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/wxshare.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxinterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/wxinterface.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,36 +18,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="datiaffirm.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datiaffirm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" column="96" selection-start-line="17" selection-start-column="96" selection-end-line="17" selection-end-column="96" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getJsTicketPage.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/getJsTicketPage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="427">
+              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wxshare.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/wxshare.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wxinterface.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wxinterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="91" column="17" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="17" />
+              <folding>
+                <element signature="n#getUrl#0;n#!!top" />
+                <element signature="n#postUrl#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbconn.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dbconn.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="203" column="32" selection-start-line="203" selection-start-column="32" selection-end-line="203" selection-end-column="32" />
+              <folding>
+                <element signature="n#saveUserIdToDb#0;n#!!top" />
+                <element signature="n#getTopUserList#0;n#!!top" />
+                <element signature="n#updateAnswerTimes#0;n#!!top" />
+                <element signature="n#updateChoujiang#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="datinew.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/datinew.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="171" column="22" lean-forward="true" selection-start-line="171" selection-start-column="22" selection-end-line="171" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getSubject.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/getSubject.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/choujiang/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1148">
-              <caret line="453" column="55" selection-start-line="453" selection-start-column="52" selection-end-line="453" selection-end-column="55" />
-              <folding>
-                <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="550">
+              <caret line="139" column="100" selection-start-line="139" selection-start-column="100" selection-end-line="139" selection-end-column="100" />
             </state>
           </provider>
         </entry>
@@ -68,7 +94,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>echo</find>
       <find>index</find>
       <find>con</find>
       <find>console</find>
@@ -91,6 +116,11 @@
       <find>alert</find>
       <find>btnanswer</find>
       <find>nextQuestion</find>
+      <find>countDown</find>
+      <find>var_dump</find>
+      <find>die</find>
+      <find>dump</find>
+      <find>echo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -131,24 +161,24 @@
         <option value="$PROJECT_DIR$/session.php" />
         <option value="$PROJECT_DIR$/useraction.php" />
         <option value="$PROJECT_DIR$/anslist.php" />
-        <option value="$PROJECT_DIR$/getJsTicketPage.php" />
         <option value="$PROJECT_DIR$/saveRealName.php" />
-        <option value="$PROJECT_DIR$/js/wxshare.js" />
         <option value="$PROJECT_DIR$/test/dataffirm.php.html" />
         <option value="$PROJECT_DIR$/test/dataffirm.html" />
         <option value="$PROJECT_DIR$/choujiang/css/style.css" />
         <option value="$PROJECT_DIR$/test/dati.html" />
         <option value="$PROJECT_DIR$/authorization.php" />
         <option value="$PROJECT_DIR$/redirect_uri.php" />
-        <option value="$PROJECT_DIR$/wxinterface.php" />
         <option value="$PROJECT_DIR$/dbconn.php" />
         <option value="$PROJECT_DIR$/mobilealert/need/layer.css" />
         <option value="$PROJECT_DIR$/test/datiaffirm.html" />
-        <option value="$PROJECT_DIR$/datiaffirm.php" />
         <option value="$PROJECT_DIR$/test/duigou.html" />
         <option value="$PROJECT_DIR$/test/datinew2.html" />
         <option value="$PROJECT_DIR$/choujiang/index.html" />
         <option value="$PROJECT_DIR$/getSubject.php" />
+        <option value="$PROJECT_DIR$/wxinterface.php" />
+        <option value="$PROJECT_DIR$/getJsTicketPage.php" />
+        <option value="$PROJECT_DIR$/datiaffirm.php" />
+        <option value="$PROJECT_DIR$/js/wxshare.js" />
         <option value="$PROJECT_DIR$/datinew.php" />
       </list>
     </option>
@@ -185,6 +215,11 @@
               <item name="YifengDatiChoujiang" type="b2602c69:ProjectViewProjectNode" />
               <item name="YifengDatiChoujiang" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="choujiang" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="YifengDatiChoujiang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YifengDatiChoujiang" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -241,16 +276,15 @@
       <workItem from="1524284243259" duration="19411000" />
       <workItem from="1524346693793" duration="28287000" />
       <workItem from="1524390427714" duration="5007000" />
-      <workItem from="1524434313526" duration="40175000" />
+      <workItem from="1524434313526" duration="44804000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280851000" />
+    <option name="totallyTimeSpent" value="285480000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="-8" width="1385" height="916" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19868517" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -383,20 +417,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/wxshare.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getJsTicketPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/dataffirm.php.html" />
     <entry file="file://$PROJECT_DIR$/test/datinew.html" />
     <entry file="file://$PROJECT_DIR$/test/dataffirm.html">
@@ -456,20 +476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wxinterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="80" column="38" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
-          <folding>
-            <element signature="n#getUrl#0;n#!!top" />
-            <element signature="n#postUrl#0;n#!!top" />
-            <element signature="n#getAccessToken#0;n#!!top" />
-            <element signature="n#sendMsg#0;n#!!top" />
-            <element signature="n#getJsAPITicket#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/authorization.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -484,19 +490,6 @@
           <folding>
             <element signature="e#743#1553#0#PHP" />
             <element signature="e#1555#2199#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbconn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="83" column="63" selection-start-line="83" selection-start-column="63" selection-end-line="83" selection-end-column="63" />
-          <folding>
-            <element signature="n#saveUserIdToDb#0;n#!!top" />
-            <element signature="n#getTopUserList#0;n#!!top" />
-            <element signature="n#updateAnswerTimes#0;n#!!top" />
-            <element signature="n#updateChoujiang#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -559,13 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datiaffirm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
-          <caret line="53" column="53" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/datinew2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -608,10 +594,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wxinterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="91" column="17" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="17" />
+          <folding>
+            <element signature="n#getUrl#0;n#!!top" />
+            <element signature="n#postUrl#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbconn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="203" column="32" selection-start-line="203" selection-start-column="32" selection-end-line="203" selection-end-column="32" />
+          <folding>
+            <element signature="n#saveUserIdToDb#0;n#!!top" />
+            <element signature="n#getTopUserList#0;n#!!top" />
+            <element signature="n#updateAnswerTimes#0;n#!!top" />
+            <element signature="n#updateChoujiang#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getJsTicketPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datiaffirm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="96" selection-start-line="17" selection-start-column="96" selection-end-line="17" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/wxshare.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/datinew.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="171" column="22" lean-forward="true" selection-start-line="171" selection-start-column="22" selection-end-line="171" selection-end-column="22" />
+        <state relative-caret-position="550">
+          <caret line="139" column="100" selection-start-line="139" selection-start-column="100" selection-end-line="139" selection-end-column="100" />
         </state>
       </provider>
     </entry>

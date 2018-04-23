@@ -115,7 +115,7 @@ function getJsAPITicket()
 
     if ($ticket == "0") {
         //已过期重新获取
-        $token = getTokenFromDb();
+        $token = getAccessToken();
         $url = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=" . $token . "&type=jsapi";
         $result = getUrl($url);
         $result = json_decode($result, true);

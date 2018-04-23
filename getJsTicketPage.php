@@ -23,7 +23,7 @@ $data = array(
     'signature' => $sha1
 );
 
-echo json_encode($data);
+echo json_encode($data, true);
 
 function create_password($pw_length = 16)
 {
