@@ -19,6 +19,10 @@ getSession(1);
 
 
     <script type="text/javascript">
+        var u = navigator.userAgent, app = navigator.appVersion;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
         var audioright, audiowrong, audioke;
         var colorCfg = {
             'choosed': '#ff695f',    //选上的
@@ -31,8 +35,13 @@ getSession(1);
             audioke = document.getElementById("audioke");
 
             document.addEventListener("WeixinJSBridgeReady", function () {
-                audioke.play();
-                audioke.muted = true;
+                if (isiOS) {
+                    audioke.muted = true;
+                    setTimeout(function () {
+                        audioke.play();
+                    }, 3000)
+                }
+
             }, false);
         };
 
@@ -267,21 +276,22 @@ getSession(1);
             var now = 100;
             timer = setInterval(function () {
 
-                if (now < 40) {
-                    if ((now % 10) == 0) {
-                        try {
-                            //audioke.play();
-                            // audiowrong.play();
-                            // audioright.play();
+                if (isiOS) {
+                    if (now < 50 && now >= 10) {
+                        if ((now % 10) == 0) {
                             audioke.muted = false;
                             audioke.load();
                             audioke.play();
                         }
-                        catch (e) {
-                            alert(e);
+                    }
+                } else {
+                    if (now < 40) {
+                        if ((now % 10) == 0) {
+                            audioke.play();
                         }
                     }
                 }
+
                 if (now == 0) {
                     clearInterval(timer);
                     nextQuestion(currentNo);
@@ -430,7 +440,7 @@ getSession(1);
             background-size: 30px 30px;
         }
     </style>
-    <audio src="wav/ke.wav" preload="auto" muted id="audioke">wav</audio>
+    <audio src="wav/ke.wav" preload="auto" id="audioke">wav</audio>
     <audio src="wav/diright.wav" preload="auto" id="audioright">wav</audio>
     <audio src="wav/diwrong.wav" preload="auto" id="audiowrong">wav</audio>
 </head>
