@@ -27,7 +27,7 @@ wx.ready(function () {
 //获取“分享给朋友”按钮点击状态及自定义分享内容接口
     wx.onMenuShareAppMessage({
         title: '顾客挚爱日邀你有奖答题!', // 分享标题
-        desc: '为了赢得顾客的微笑，我们能做的是什么？对我们来说，还有诸多方面需要为之而奋斗。“顾客挚爱日”，恰是思索为了顾客的微笑能够做些什么，并且在日常业务中付诸行动的良好时机。来参加答题吧，提高每个人的工作品质，全公司团结一致，努力去实践“顾客第一”！', // 分享描述
+        desc: '来参加答题吧，提高每个人的工作品质，全公司团结一致，努力实践“顾客第一”！', // 分享描述
         link: 'http://bisai.uncars.com/authorization.php', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
         imgUrl: 'http://bisai.uncars.com/choujiang/images/wxshare.jpg', // 分享图标
         type: '', // 分享类型,music、video或link，不填默认为link

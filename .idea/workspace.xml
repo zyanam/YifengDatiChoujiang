@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a679880-9720-4475-af7b-06a624024f2d" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/choujiang/js/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/choujiang/js/testiosautoplay.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/one.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/testiosautoplay.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datiaffirm.php" beforeDir="false" afterPath="$PROJECT_DIR$/datiaffirm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datinew.php" beforeDir="false" afterPath="$PROJECT_DIR$/datinew.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getJsTicketPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/getJsTicketPage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/wxshare.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/wxshare.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wxinterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/wxinterface.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="datiaffirm.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="datiaffirm.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/datiaffirm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="96" selection-start-line="17" selection-start-column="96" selection-end-line="17" selection-end-column="96" />
+            <state relative-caret-position="530">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
             </state>
           </provider>
         </entry>
@@ -30,17 +32,8 @@
       <file leaf-file-name="getJsTicketPage.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/getJsTicketPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
+            <state relative-caret-position="420">
               <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wxshare.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/wxshare.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -48,7 +41,7 @@
       <file leaf-file-name="wxinterface.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wxinterface.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
+            <state relative-caret-position="1386">
               <caret line="91" column="17" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="17" />
               <folding>
                 <element signature="n#getUrl#0;n#!!top" />
@@ -61,7 +54,7 @@
       <file leaf-file-name="dbconn.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbconn.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
+            <state relative-caret-position="3190">
               <caret line="203" column="32" selection-start-line="203" selection-start-column="32" selection-end-line="203" selection-end-column="32" />
               <folding>
                 <element signature="n#saveUserIdToDb#0;n#!!top" />
@@ -73,11 +66,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datinew.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="datinew.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/datinew.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="139" column="100" selection-start-line="139" selection-start-column="100" selection-end-line="139" selection-end-column="100" />
+            <state relative-caret-position="252">
+              <caret line="275" column="49" selection-start-line="275" selection-start-column="49" selection-end-line="275" selection-end-column="49" />
+              <folding>
+                <element signature="e#10041#10355#0#HTML" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/choujiang/js/test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-65">
+              <caret line="167" selection-start-line="167" selection-end-line="167" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="one.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/one.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -87,8 +101,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -121,6 +135,8 @@
       <find>die</find>
       <find>dump</find>
       <find>echo</find>
+      <find>iii</find>
+      <find>audio</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,10 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/dbtest.php" />
-        <option value="$PROJECT_DIR$/jquery.mobile-1.4.5/demos/index.html" />
-        <option value="$PROJECT_DIR$/dati.html" />
-        <option value="$PROJECT_DIR$/test/test1.html" />
         <option value="$PROJECT_DIR$/datibootstrap.html" />
         <option value="$PROJECT_DIR$/test/test2.html" />
         <option value="D:/svg/circle.html" />
@@ -177,9 +189,13 @@
         <option value="$PROJECT_DIR$/getSubject.php" />
         <option value="$PROJECT_DIR$/wxinterface.php" />
         <option value="$PROJECT_DIR$/getJsTicketPage.php" />
-        <option value="$PROJECT_DIR$/datiaffirm.php" />
+        <option value="$PROJECT_DIR$/test/one.html" />
         <option value="$PROJECT_DIR$/js/wxshare.js" />
+        <option value="$PROJECT_DIR$/choujiang/js/test.js" />
+        <option value="$PROJECT_DIR$/test/testiosautoplay.html" />
+        <option value="$PROJECT_DIR$/choujiang/js/testiosautoplay.js" />
         <option value="$PROJECT_DIR$/datinew.php" />
+        <option value="$PROJECT_DIR$/datiaffirm.php" />
       </list>
     </option>
   </component>
@@ -203,7 +219,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -219,12 +234,19 @@
             <path>
               <item name="YifengDatiChoujiang" type="b2602c69:ProjectViewProjectNode" />
               <item name="YifengDatiChoujiang" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="choujiang" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="YifengDatiChoujiang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YifengDatiChoujiang" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="test" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -234,14 +256,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\yanam\test" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\yanam\choujiang\css" />
       <recent name="D:\yanam\choujiang" />
       <recent name="D:\yanam\test" />
       <recent name="D:\yanam" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\yanam\test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -277,14 +299,16 @@
       <workItem from="1524346693793" duration="28287000" />
       <workItem from="1524390427714" duration="5007000" />
       <workItem from="1524434313526" duration="44804000" />
+      <workItem from="1524529150995" duration="12427000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285480000" />
+    <option name="totallyTimeSpent" value="297907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="-8" width="1385" height="916" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19868517" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -319,20 +343,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/clearsession.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/dati.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dati1.php" />
     <entry file="file://$PROJECT_DIR$/getJsAPITikent.php" />
     <entry file="file://$PROJECT_DIR$/题库数据.txt" />
@@ -375,15 +385,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -487,10 +488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
-          <folding>
-            <element signature="e#743#1553#0#PHP" />
-            <element signature="e#1555#2199#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -507,12 +504,6 @@
           <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test.html">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test1.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -577,13 +568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1148">
           <caret line="453" column="55" selection-start-line="453" selection-start-column="52" selection-end-line="453" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -596,7 +580,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wxinterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
+        <state relative-caret-position="1386">
           <caret line="91" column="17" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="17" />
           <folding>
             <element signature="n#getUrl#0;n#!!top" />
@@ -607,7 +591,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dbconn.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
+        <state relative-caret-position="3190">
           <caret line="203" column="32" selection-start-line="203" selection-start-column="32" selection-end-line="203" selection-end-column="32" />
           <folding>
             <element signature="n#saveUserIdToDb#0;n#!!top" />
@@ -618,31 +602,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getJsTicketPage.php">
+    <entry file="file://$PROJECT_DIR$/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datiaffirm.php">
+    <entry file="file://$PROJECT_DIR$/test/one.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="96" selection-start-line="17" selection-start-column="96" selection-end-line="17" selection-end-column="96" />
+        <state relative-caret-position="288">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/wxshare.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        <state relative-caret-position="462">
+          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getJsTicketPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/choujiang/js/testiosautoplay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/testiosautoplay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1388">
+          <caret line="69" column="7" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/choujiang/js/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-65">
+          <caret line="167" selection-start-line="167" selection-end-line="167" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/datinew.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="139" column="100" selection-start-line="139" selection-start-column="100" selection-end-line="139" selection-end-column="100" />
+        <state relative-caret-position="252">
+          <caret line="275" column="49" selection-start-line="275" selection-start-column="49" selection-end-line="275" selection-end-column="49" />
+          <folding>
+            <element signature="e#10041#10355#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datiaffirm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>

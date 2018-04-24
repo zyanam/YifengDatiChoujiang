@@ -53,8 +53,6 @@ getSession(1);
 
 </head>
 <body style="margin: 0;">
-<audio src="wav/diright.wav" id="diright">wav</audio>
-<audio src="wav/diwrong.wav" id="diwrong">wav</audio>
 <div id="mainbg">
     <a href="datinew.php" id="btnstart"></a>
 </div>

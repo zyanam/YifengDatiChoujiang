@@ -10,7 +10,7 @@ getSession(1);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>答题</title>
-    <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 
     <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript"></script>
     <script src="../js/wxshare.js" type="text/javascript"></script>
@@ -29,6 +29,11 @@ getSession(1);
             audioright = document.getElementById("audioright");
             audiowrong = document.getElementById("audiowrong");
             audioke = document.getElementById("audioke");
+
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                audioke.play();
+                audioke.muted = true;
+            }, false);
         };
 
         function stopTouchendPropagationAfterScroll() {
@@ -54,6 +59,84 @@ getSession(1);
                 });
             });
 
+            $('#mainbody').on("touchmove", ".btnanswer", function () {
+                stopTouchendPropagationAfterScroll();
+            });
+
+            //绑定答题按钮事件
+            $("#mainbody").on("touchend", ".ontouchend", function () {
+
+                var $this = $(this).removeClass('ontouchend');
+                var isAns = $this.attr('isans');
+                var $spanbtn = $this.find(".spanbtn");
+                var no = $this.attr('no');
+
+                $this.siblings().each(function (i, item) {
+                    //取消按钮绑定事件
+                    $(item).removeClass('ontouchend');
+                });
+
+                if ($spanbtn.height() > 24) {
+                    $spanbtn.css({
+                        'textIndent': '1.5rem'
+                    });
+                }
+
+                $this.css('backgroundColor', colorCfg.choosed);
+                setTimeout(function () {
+                    $this.css('backgroundColor', '#FFF');
+                }, 500);
+
+
+                if (isAns == 1) {
+                    //答对了
+                    arrAnswer.push(no);
+                    audioright.play();
+                    setTimeout(function () {
+                        $this.find('.symbol').css('backgroundImage', 'url("img/right.png")').show();
+                    }, 500);
+                }
+                else {
+                    //答错了
+                    audiowrong.play();
+
+                    setTimeout(function () {
+                        $this.find('.symbol').css('backgroundImage', 'url("img/wrong.png")').show();
+                    }, 500)
+
+
+                    $this.attr('cs', '1');
+                    setTimeout(function () {
+                        //$this.css('backgroundColor', colorCfg.wrong);
+                        //$groups = $this.parents('.btnanswergroup').find('.btnanswer');
+                        $groups = $this.siblings();
+                        $.each($groups, function (i, group) {
+                            $group = $(group);
+                            if ($group.attr('isans') == 1) {
+                                var $spanbtn = $group.find(".spanbtn");
+                                if ($spanbtn.height() > 24) {
+                                    $spanbtn.css({
+                                        'textIndent': '1.5rem'
+                                    });
+                                }
+                                $group.find('.symbol').css('backgroundImage', 'url("img/right.png")').show();
+                            }
+                            else {
+                                if ($group.attr('cs') != 1) {
+                                    $group.animate({
+                                        opacity: 0
+                                    });
+                                }
+                            }
+                        });
+                    }, 500);
+                }
+
+                setTimeout(function () {
+                    nextQuestion(no);
+                }, 2000);
+            });
+
 
             //获取数据
             $.get("../getSubject.php", function ($res) {
@@ -70,7 +153,7 @@ getSession(1);
                     $templateclone.attr('id', qid);
 
                     var $btnanswergroup = $templateclone.find(".btnanswergroup");
-                    var $btnanswer = $("<div class=\"btnanswer\"><div class=\"symbol\"></div><span class=\"spanbtn\">滚雪球理论</span></div>");
+                    var $btnanswer = $("<div class=\"btnanswer ontouchend\"><div class=\"symbol\"></div><span class=\"spanbtn\">滚雪球理论</span></div>");
                     $btnanswer.attr('qid', qid)
                         .attr('no', i);
 
@@ -105,88 +188,13 @@ getSession(1);
                 });
             });
 
-            //绑定答题按钮事件
-            $('.btnanswer').live("touchend", function () {
-                var $this = $(this);
-                var isAns = $this.attr('isans');
-                var $spanbtn = $this.find(".spanbtn");
-                var no = $this.attr('no');
-
-                if ($spanbtn.height() > 24) {
-                    $spanbtn.css({
-                        'textIndent': '1.5rem'
-                    });
-                }
-
-                $this.css('backgroundColor', colorCfg.choosed);
-                setTimeout(function () {
-                    $this.css('backgroundColor', '#FFF');
-                }, 500);
-
-
-                if (isAns == 1) {
-                    //答对了
-                    arrAnswer.push(no);
-                    audioright.play();
-                    setTimeout(function () {
-                        $this.find('.symbol').css('backgroundImage', 'url("img/right.png")').show();
-                    }, 500);
-                }
-                else {
-                    //答错了
-                    audiowrong.play();
-
-                    setTimeout(function(){
-                        $this.find('.symbol').css('backgroundImage', 'url("img/wrong.png")').show();
-                    },500)
-
-
-                    $this.attr('cs', '1');
-                    setTimeout(function () {
-                        //$this.css('backgroundColor', colorCfg.wrong);
-                        //$groups = $this.parents('.btnanswergroup').find('.btnanswer');
-                        $groups = $this.siblings();
-                        $.each($groups, function (i, group) {
-                            $group = $(group);
-                            if ($group.attr('isans') == 1) {
-                                var $spanbtn = $group.find(".spanbtn");
-                                if ($spanbtn.height() > 24) {
-                                    $spanbtn.css({
-                                        'textIndent': '1.5rem'
-                                    });
-                                }
-                                $group.find('.symbol').css('backgroundImage', 'url("img/right.png")').show();
-                            }
-                            else {
-                                if ($group.attr('cs') != 1) {
-                                    $group.animate({
-                                        opacity: 0
-                                    });
-                                }
-                            }
-                        });
-                    }, 500);
-                }
-
-                setTimeout(function () {
-                    nextQuestion(no);
-                }, 1500);
-            });
-
-            $('.btnanswer').live("touchmove", function () {
-                stopTouchendPropagationAfterScroll();
-            });
-        })
-        ;
+        });
 
         function nextQuestion(no) {
             clearInterval(timer);
-            iii--
-            // return;
             currentNo = parseInt(no) + 1;
             if (no == 5) {
                 clearInterval(timer);
-                iii--;
                 //提交
                 //alert(arrAnswer.join(','));
                 var ra = arrAnswer.length;
@@ -252,24 +260,30 @@ getSession(1);
             }
         }
 
-        var iii = 0;
         var timer;
 
         function countDown() {
-            iii++;
-            console.log("timercount=" + iii);
 
             var now = 100;
             timer = setInterval(function () {
 
                 if (now < 40) {
                     if ((now % 10) == 0) {
-                        audioke.play();
+                        try {
+                            //audioke.play();
+                            // audiowrong.play();
+                            // audioright.play();
+                            audioke.muted = false;
+                            audioke.load();
+                            audioke.play();
+                        }
+                        catch (e) {
+                            alert(e);
+                        }
                     }
                 }
                 if (now == 0) {
                     clearInterval(timer);
-                    iii--;
                     nextQuestion(currentNo);
                 } else {
                     now -= 1;
@@ -285,7 +299,6 @@ getSession(1);
             var progress = document.getElementById("progress");
             progress.style.width = cent + "%";
         }
-
 
     </script>
     <style type="text/css">
@@ -417,11 +430,11 @@ getSession(1);
             background-size: 30px 30px;
         }
     </style>
+    <audio src="wav/ke.wav" preload="auto" muted id="audioke">wav</audio>
+    <audio src="wav/diright.wav" preload="auto" id="audioright">wav</audio>
+    <audio src="wav/diwrong.wav" preload="auto" id="audiowrong">wav</audio>
 </head>
 <body>
-<audio src="wav/diright.wav" id="audioright">wav</audio>
-<audio src="wav/diwrong.wav" id="audiowrong">wav</audio>
-<audio src="wav/ke.wav" id="audioke">wav</audio>
 <div class="" id="mainbody">
     <div class="questiongroup" id="template" style="display: none;">
         <div class="divsubject">

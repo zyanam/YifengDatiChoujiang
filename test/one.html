@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $(".btnanswer").click(function () {
+                $('.btnanswer1').append("<div class='btnanswer2'>另一个</div>");
+            });
+
+            $(".btnanswer1").on("click", function () {
+                alert('aa');
+            })
+        });
+    </script>
+    <style type="text/css">
+        .btnanswer {
+            height: 5rem;
+            width: 5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="btnanswer">
+    按钮
+</div>
+<div class="btnanswer1">
+
+</div>
+</body>
+</html>
