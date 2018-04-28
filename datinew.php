@@ -293,15 +293,20 @@ getSession(1);
                 }
 
                 if (isiOS) {
-                    if (now < 40 && now >= 7) {
-                        if ((now % 7) == 0) {
-                            audioke.muted = false;
-                            audioke.load();
-                            audioke.play();
-                        }
+                    // if (now <= 42 && now != 0) {
+                    //     if ((now % 7) == 0) {
+                    //         audioke.muted = false;
+                    //         audioke.load();
+                    //         audioke.play();
+                    //     }
+                    // }
+                    if (now == 37 || now == 30 || now == 23 || now == 16 || now == 9) {
+                        audioke.muted = false;
+                        audioke.load();
+                        audioke.play();
                     }
                 } else {
-                    if (now < 33) {
+                    if (now < 42 && now != 0) {
                         if ((now % 7) == 0) {
                             audioke.play();
                         }
@@ -442,7 +447,7 @@ getSession(1);
         #progressbar {
             position: fixed;
             height: 10px;
-            width: 70%;
+            width: 68%;
             /*border: 1px solid #000000;*/
             border-radius: 5px;
             text-align: center;
