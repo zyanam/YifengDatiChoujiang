@@ -51,10 +51,13 @@ if ($action == "dati") {
             $dati = $data["dati"];
             $tright = $data["tright"];
             $choujiang = $data["choujiang"];
-            $rate = intval(($tright / $dati) * 100);
+            $rate = 0;
+            if ($dati > 0) {
+                $rate = intval(($tright / $dati) * 100);
+            }
 
-            $msg = "这是您第" . $dati . "次答题。\n";
-            $msg .= $tright . "次全部正确\n正确率" . $rate . "%。\n";
+            $msg = "这是您第" . $dati . "次答题。<br />";
+            $msg .= $tright . "次全部正确<br />正确率" . $rate . "%。<br />";
             $msg .= "排名第" . $rownum . "";
 
             //发送微信消息
@@ -90,7 +93,7 @@ if ($action == "choujiang") {
     $result = updateChoujiang($userid, $jiangpin, $jlNo); //更新中奖状态及领奖时间
 
     if ($result) {
-        sendMsg($userid, "恭喜中" . $jlName . "! " . urldecode($jiangpin) . "。\n请联系售后服务部企划室孙菲领奖。");
+        sendMsg($userid, "恭喜中" . $jlName . "! " . urldecode($jiangpin) . "。<br />请联系售后服务部企划室孙菲领奖。");
     }
 
     $ary = array("result" => $result);

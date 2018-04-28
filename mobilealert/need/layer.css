@@ -44,8 +44,9 @@
     display: inline-block;
     text-align: left;
     background-color: #fff;
-    font-size: 1.2rem;
-    border-radius: 0.5rem;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 1rem;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     pointer-events: auto;
     -webkit-overflow-scrolling: touch;
@@ -122,7 +123,7 @@
 }
 
 .layui-m-layer0 .layui-m-layerchild {
-    width: 70%;
+    width: 80%;
     max-width: 640px;
 }
 
@@ -161,7 +162,7 @@
 .layui-m-layercont {
     padding: 50px 30px;
     line-height: 22px;
-    text-align: left;
+    text-align: center;
 }
 
 .layui-m-layer1 .layui-m-layercont {
@@ -248,7 +249,7 @@
     text-align: center;
     border-top: 1px solid #D0D0D0;
     background-color: #F2F2F2;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 1rem 1rem;
 }
 
 .layui-m-layerbtn span {
@@ -258,8 +259,9 @@
     box-flex: 1;
     -webkit-box-flex: 1;
     text-align: center;
-    font-size: 14px;
-    border-radius: 0 0 5px 5px;
+    font-size: 18px;
+    font-weight: normal;
+    border-radius: 0 0 1rem 1rem;
     cursor: pointer;
 }
 
@@ -269,7 +271,7 @@
 
 .layui-m-layerbtn span[no] {
     border-right: 1px solid #D0D0D0;
-    border-radius: 0 0 0 5px;
+    border-radius: 0 0 0 1rem;
 }
 
 .layui-m-layerbtn span:active {
@@ -340,12 +342,12 @@ body .layui-m-layer .layui-m-layer-footer {
 .layui-m-layer-footer .layui-m-layerbtn span[no] {
     color: #FD482C;
     border-top: 1px solid #c2c2c2;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 1rem 1rem;
 }
 
 .layui-m-layer-footer .layui-m-layerbtn span[yes] {
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 1rem;
 }
 
 /* 通用提示 */

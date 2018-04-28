@@ -15,8 +15,17 @@ getSession(1);
     <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript"></script>
     <script src="../js/wxshare.js" type="text/javascript"></script>
 
-    <script src="mobilealert/layer.js" type="text/javascript"></script>
-
+    <script src="mobilealert/layer.js?v=5" type="text/javascript"></script>
+    <script type="text/javascript">
+        // window.alert = function (name) {
+        //     var iframe = document.createElement("IFRAME");
+        //     iframe.style.display = "none";
+        //     iframe.setAttribute("src", 'data:text/plain,');
+        //     document.documentElement.appendChild(iframe);
+        //     window.frames[0].window.alert(name);
+        //     iframe.parentNode.removeChild(iframe);
+        // }
+    </script>
 
     <script type="text/javascript">
         var u = navigator.userAgent, app = navigator.appVersion;
@@ -75,6 +84,7 @@ getSession(1);
             //绑定答题按钮事件
             $("#mainbody").on("touchend", ".ontouchend", function () {
 
+                clearInterval(timer);
                 var $this = $(this).removeClass('ontouchend');
                 var isAns = $this.attr('isans');
                 var $spanbtn = $this.find(".spanbtn");
@@ -221,7 +231,7 @@ getSession(1);
                             //alert("恭喜您全部答对\n可以抽奖啦，祝您好运");
                             layer.open({
                                 content: '恭喜您全部答对<br />可以抽奖啦，祝您好运'
-                                , btn: '好的'
+                                , btn: 'OK'
                                 , yes: function (index) {
                                     document.location.href = "choujiang/index.html";
                                     layer.close(index)
@@ -232,7 +242,7 @@ getSession(1);
                             //alert("恭喜您全部答对\n" + $msg);
                             layer.open({
                                 content: '恭喜您全部答对<br />' + $msg
-                                , btn: '好的'
+                                , btn: 'OK'
                                 , yes: function (index) {
                                     document.location.href = "datiaffirm.php";
                                     layer.close(index)
@@ -251,7 +261,7 @@ getSession(1);
                         //alert($msgnew);
                         layer.open({
                             content: $msgnew
-                            , btn: '好的'
+                            , btn: 'OK'
                             , yes: function (index) {
                                 layer.close(index);
                                 document.location.href = "datiaffirm.php";
