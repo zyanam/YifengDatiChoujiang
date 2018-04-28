@@ -13,7 +13,7 @@ getSession(1);
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 
     <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript"></script>
-    <script src="../js/wxshare.js" type="text/javascript"></script>
+    <script src="js/wxshare.js" type="text/javascript"></script>
 
     <script src="mobilealert/layer.js?v=5" type="text/javascript"></script>
     <script type="text/javascript">
@@ -275,7 +275,6 @@ getSession(1);
                     $q = $('#q' + currentNo);
                     $q.fadeIn();
                 });
-                $("#circle").text("15");
                 countDown();
             }
         }
@@ -286,11 +285,6 @@ getSession(1);
 
             var now = 100;
             timer = setInterval(function () {
-                $circle = $('#circle');
-                if ((now % 7) == 0) {
-
-                    $circle.text(parseInt($circle.text()) - 1);
-                }
 
                 if (isiOS) {
                     if (now < 40 && now >= 7) {
@@ -492,7 +486,7 @@ getSession(1);
         </div>
     </div>
 </div>
-<div class="circle" id="circle">
+<div class="circle">
     15
 </div>
 <div id="divfooter">
