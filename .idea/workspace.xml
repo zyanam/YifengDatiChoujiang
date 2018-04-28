@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a679880-9720-4475-af7b-06a624024f2d" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/test/testmobilealert.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/choujiang/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/choujiang/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/choujiang/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/choujiang/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datinew.php" beforeDir="false" afterPath="$PROJECT_DIR$/datinew.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobilealert/layer.js" beforeDir="false" afterPath="$PROJECT_DIR$/mobilealert/layer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobilealert/need/layer.css" beforeDir="false" afterPath="$PROJECT_DIR$/mobilealert/need/layer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/useraction.php" beforeDir="false" afterPath="$PROJECT_DIR$/useraction.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,11 +20,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="datinew.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="datinew.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/datinew.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="287" column="32" selection-start-line="287" selection-start-column="32" selection-end-line="287" selection-end-column="32" />
+            <state relative-caret-position="758">
+              <caret line="230" column="39" selection-start-line="230" selection-start-column="37" selection-end-line="230" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="useraction.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/useraction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1264">
+              <caret line="87" column="30" lean-forward="true" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbconn.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dbconn.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobilealert/layer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="198" column="40" selection-start-line="198" selection-start-column="40" selection-end-line="198" selection-end-column="40" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layer.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobilealert/need/layer.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="46" column="13" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testmobilealert.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/testmobilealert.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/choujiang/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+              <folding>
+                <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/choujiang/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.bak.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/choujiang/index.bak.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="25" column="26" selection-start-line="23" selection-end-line="30" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -27,33 +112,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>index</find>
-      <find>con</find>
-      <find>console</find>
-      <find>.jpg</find>
-      <find>chj</find>
-      <find>item</find>
-      <find>zhuti</find>
-      <find>chj_t</find>
-      <find>chj_t_con</find>
-      <find>cj_b</find>
-      <find>zjmd_list</find>
-      <find>clearfloat</find>
       <find>cjzjnr</find>
       <find>.zjmd_list_ul li</find>
-      <find>.zjmd_list</find>
       <find>FFF</find>
       <find>zjmd_list_li_r</find>
       <find>工号</find>
-      <find>layui-m-layercont</find>
-      <find>alert</find>
       <find>btnanswer</find>
       <find>nextQuestion</find>
       <find>countDown</find>
@@ -63,6 +133,22 @@
       <find>echo</find>
       <find>iii</find>
       <find>audio</find>
+      <find>layui-m-layerchild</find>
+      <find>.layui-m-layerbtn span</find>
+      <find>.layui-m-layerbtn</find>
+      <find>layui-m-layercont</find>
+      <find>layer</find>
+      <find>span</find>
+      <find>bold</find>
+      <find>layui-m-layerbtn</find>
+      <find>alert</find>
+      <find>font-size</find>
+      <find>css</find>
+      <find>好的</find>
+      <find>恭喜</find>
+      <find>rem</find>
+      <find>.zjmd_list</find>
+      <find>.cj_b_con</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -71,8 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/datibootstrap.html" />
-        <option value="$PROJECT_DIR$/test/test2.html" />
         <option value="D:/svg/circle.html" />
         <option value="D:/svg/圆环百分比.html" />
         <option value="D:/svg/圆环百分比2.html" />
@@ -97,21 +181,17 @@
         <option value="$PROJECT_DIR$/test/process.html" />
         <option value="$PROJECT_DIR$/simlongin.php" />
         <option value="$PROJECT_DIR$/session.php" />
-        <option value="$PROJECT_DIR$/useraction.php" />
         <option value="$PROJECT_DIR$/anslist.php" />
         <option value="$PROJECT_DIR$/saveRealName.php" />
         <option value="$PROJECT_DIR$/test/dataffirm.php.html" />
         <option value="$PROJECT_DIR$/test/dataffirm.html" />
-        <option value="$PROJECT_DIR$/choujiang/css/style.css" />
         <option value="$PROJECT_DIR$/test/dati.html" />
         <option value="$PROJECT_DIR$/authorization.php" />
         <option value="$PROJECT_DIR$/redirect_uri.php" />
         <option value="$PROJECT_DIR$/dbconn.php" />
-        <option value="$PROJECT_DIR$/mobilealert/need/layer.css" />
         <option value="$PROJECT_DIR$/test/datiaffirm.html" />
         <option value="$PROJECT_DIR$/test/duigou.html" />
         <option value="$PROJECT_DIR$/test/datinew2.html" />
-        <option value="$PROJECT_DIR$/choujiang/index.html" />
         <option value="$PROJECT_DIR$/getSubject.php" />
         <option value="$PROJECT_DIR$/wxinterface.php" />
         <option value="$PROJECT_DIR$/getJsTicketPage.php" />
@@ -121,7 +201,13 @@
         <option value="$PROJECT_DIR$/test/testiosautoplay.html" />
         <option value="$PROJECT_DIR$/choujiang/js/testiosautoplay.js" />
         <option value="$PROJECT_DIR$/datiaffirm.php" />
+        <option value="$PROJECT_DIR$/test/testmobilealert.html" />
+        <option value="$PROJECT_DIR$/mobilealert/need/layer.css" />
+        <option value="$PROJECT_DIR$/mobilealert/layer.js" />
         <option value="$PROJECT_DIR$/datinew.php" />
+        <option value="$PROJECT_DIR$/useraction.php" />
+        <option value="$PROJECT_DIR$/choujiang/css/style.css" />
+        <option value="$PROJECT_DIR$/choujiang/index.html" />
       </list>
     </option>
   </component>
@@ -162,12 +248,18 @@
               <item name="YifengDatiChoujiang" type="b2602c69:ProjectViewProjectNode" />
               <item name="YifengDatiChoujiang" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="choujiang" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="YifengDatiChoujiang" type="b2602c69:ProjectViewProjectNode" />
               <item name="YifengDatiChoujiang" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="test" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mobilealert" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="YifengDatiChoujiang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YifengDatiChoujiang" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mobilealert" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="need" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -182,14 +274,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\yanam\test" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\yanam\choujiang\css" />
       <recent name="D:\yanam\choujiang" />
       <recent name="D:\yanam\test" />
       <recent name="D:\yanam" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\yanam\test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -227,12 +319,12 @@
       <workItem from="1524434313526" duration="44804000" />
       <workItem from="1524529150995" duration="15261000" />
       <workItem from="1524558174808" duration="600000" />
-      <workItem from="1524882731033" duration="247000" />
+      <workItem from="1524882731033" duration="8398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="301588000" />
+    <option name="totallyTimeSpent" value="309739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="-8" width="1385" height="916" extended-state="6" />
@@ -271,14 +363,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/datinew.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6314">
-          <caret line="287" column="32" selection-start-line="287" selection-start-column="32" selection-end-line="287" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dati1.php" />
     <entry file="file://$PROJECT_DIR$/getJsAPITikent.php" />
     <entry file="file://$PROJECT_DIR$/题库数据.txt" />
     <entry file="file://$PROJECT_DIR$/funcs.php">
@@ -377,13 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/choujiang/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1804">
-          <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/session.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -419,13 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/useraction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/dati.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -444,23 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobilealert/layer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobilealert/need/layer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="44" column="73" selection-start-line="44" selection-start-column="73" selection-end-line="44" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -496,13 +549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="63" column="11" lean-forward="true" selection-start-line="63" selection-start-column="11" selection-end-line="63" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/choujiang/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1148">
-          <caret line="453" column="55" selection-start-line="453" selection-start-column="52" selection-end-line="453" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -569,17 +615,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/choujiang/index.bak.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="25" column="26" selection-start-line="23" selection-end-line="30" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/testmobilealert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dbconn.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobilealert/need/layer.css">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
-          <caret line="203" column="32" selection-start-line="203" selection-start-column="32" selection-end-line="203" selection-end-column="32" />
+          <caret line="46" column="13" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobilealert/layer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="198" column="40" selection-start-line="198" selection-start-column="40" selection-end-line="198" selection-end-column="40" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/datinew.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="287" column="32" selection-start-line="287" selection-start-column="32" selection-end-line="287" selection-end-column="32" />
+        <state relative-caret-position="758">
+          <caret line="230" column="39" selection-start-line="230" selection-start-column="37" selection-end-line="230" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/useraction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1264">
+          <caret line="87" column="30" lean-forward="true" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/choujiang/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/choujiang/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

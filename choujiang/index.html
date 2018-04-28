@@ -12,14 +12,15 @@
     <meta content="email=no" name="format-detection">
     <meta name="viewport" content="user-scalable=no, width=device-width"/>
 
-    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css?2.0" type="text/css" rel="stylesheet">
 
     <script src="js/jquery.min.js"></script>
 
     <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript"></script>
     <script src="../js/wxshare.js" type="text/javascript"></script>
 
-    <script src="../mobilealert/layer.js" type="text/javascript"></script>
+    <link href="../mobilealert/need/layer.css?v=5">
+    <script src="../mobilealert/layer.js?v=5" type="text/javascript"></script>
 
     <script>
         window.history.forward(1);
@@ -47,7 +48,7 @@
                         //alert("答题正确才能抽奖！");
                         layer.open({
                             content: '答题正确才能抽奖！'
-                            , btn: '好的'
+                            , btn: 'OK'
                             , yes: function (index) {
                                 document.location.href = "../datiaffirm.php";
                                 layer.close(index)
@@ -60,7 +61,7 @@
                         //alert("您已经抽过奖了！");
                         layer.open({
                             content: '您已经抽过奖了！'
-                            , btn: '好的'
+                            , btn: 'OK'
                             , yes: function (index) {
                                 document.location.href = "../datiaffirm.php";
                                 layer.close(index)
@@ -302,7 +303,7 @@
                                 //alert("您已经抽过奖了！");
                                 layer.open({
                                     content: '恭喜您全部答对<br />可以抽奖啦，祝您好运'
-                                    , btn: '好的'
+                                    , btn: 'OK'
                                     , yes: function (index) {
                                         document.location.href = "../datiaffirm.php";
                                         layer.close(index)
@@ -314,7 +315,7 @@
                             //alert("恭喜您" + realname + ",抽中" + jlName + "! 奖品是" + txt + "\n请联系售后服务部企划室孙菲领奖\n请截屏保留作为领奖凭证");
                             layer.open({
                                 content: "恭喜中奖! " + txt + "!<br />一周内，奖品由事务局统一发放，请等待。"
-                                , btn: '好的'
+                                , btn: 'OK'
                                 , yes: function (index) {
                                     document.location.href = "../datiaffirm.php";
                                     layer.close(index)

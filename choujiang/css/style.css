@@ -23,7 +23,7 @@
 
 .cj_b_con {
     width: 15rem;
-    height: 9rem;
+    height: 10rem;
     margin: 0 auto;
     /*background: url(../images/md_list_bg.png) center no-repeat;*/
     background-size: 100%;
@@ -77,7 +77,7 @@
 
 .zjmd_list {
     width: 90%;
-    height: 5.5rem;
+    height: 9.5rem;
     position: absolute;
     top: 2rem;
     left: 0.5rem;
