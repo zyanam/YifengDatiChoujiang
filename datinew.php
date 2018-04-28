@@ -277,16 +277,16 @@ getSession(1);
             timer = setInterval(function () {
 
                 if (isiOS) {
-                    if (now < 50 && now >= 10) {
-                        if ((now % 10) == 0) {
+                    if (now < 40 && now >= 7) {
+                        if ((now % 7) == 0) {
                             audioke.muted = false;
                             audioke.load();
                             audioke.play();
                         }
                     }
                 } else {
-                    if (now < 40) {
-                        if ((now % 10) == 0) {
+                    if (now < 33) {
+                        if ((now % 7) == 0) {
                             audioke.play();
                         }
                     }
@@ -299,7 +299,7 @@ getSession(1);
                     now -= 1;
                     progressfn(now);
                 }
-            }, 100);
+            }, 150);
         }
 
         function progressfn(cent) {
