@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a679880-9720-4475-af7b-06a624024f2d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/datinew.php" beforeDir="false" afterPath="$PROJECT_DIR$/datinew.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/dataffirm.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/dataffirm.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/right.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/right.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/wrong.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/wrong.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,10 +17,7 @@
         <entry file="file://$PROJECT_DIR$/datinew.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="398">
-              <caret line="287" column="32" lean-forward="true" selection-start-line="287" selection-start-column="32" selection-end-line="287" selection-end-column="32" />
-              <folding>
-                <element signature="e#10041#10355#0#HTML" />
-              </folding>
+              <caret line="287" column="32" selection-start-line="287" selection-start-column="32" selection-end-line="287" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -151,6 +145,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,7 +173,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -231,12 +225,14 @@
       <workItem from="1524346693793" duration="28287000" />
       <workItem from="1524390427714" duration="5007000" />
       <workItem from="1524434313526" duration="44804000" />
-      <workItem from="1524529150995" duration="14661000" />
+      <workItem from="1524529150995" duration="15261000" />
+      <workItem from="1524558174808" duration="600000" />
+      <workItem from="1524882731033" duration="247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="300141000" />
+    <option name="totallyTimeSpent" value="301588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="-8" width="1385" height="916" extended-state="6" />
@@ -275,6 +271,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/datinew.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6314">
+          <caret line="287" column="32" selection-start-line="287" selection-start-column="32" selection-end-line="287" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dati1.php" />
     <entry file="file://$PROJECT_DIR$/getJsAPITikent.php" />
     <entry file="file://$PROJECT_DIR$/题库数据.txt" />
@@ -510,15 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/one.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -572,10 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="91" column="17" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="17" />
-          <folding>
-            <element signature="n#getUrl#0;n#!!top" />
-            <element signature="n#postUrl#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -583,22 +573,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="203" column="32" selection-start-line="203" selection-start-column="32" selection-end-line="203" selection-end-column="32" />
-          <folding>
-            <element signature="n#saveUserIdToDb#0;n#!!top" />
-            <element signature="n#getTopUserList#0;n#!!top" />
-            <element signature="n#updateAnswerTimes#0;n#!!top" />
-            <element signature="n#updateChoujiang#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/datinew.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
-          <caret line="287" column="32" lean-forward="true" selection-start-line="287" selection-start-column="32" selection-end-line="287" selection-end-column="32" />
-          <folding>
-            <element signature="e#10041#10355#0#HTML" />
-          </folding>
+          <caret line="287" column="32" selection-start-line="287" selection-start-column="32" selection-end-line="287" selection-end-column="32" />
         </state>
       </provider>
     </entry>
